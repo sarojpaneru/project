@@ -1,30 +1,59 @@
+import React, {useEffect, useState} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 
-import React from 'react';
-import {
-  Button,
-  Text,
-  View,
- 
-} from 'react-native';
-import Cuserdata from './components/Cuserdata'
-
-
-
-  const App = () =>{
-    let data=100;
-    const name =(are)=>{
-      data=20;
-      console.warn(data)
-    }
-  return (
-    <View>
-      <Cuserdata />
-      <Text style={{fontSize:30}}>{data}</Text>
-      <Text style={{fontSize:30}}>I hope you are fine</Text>
-      <Text style={{fontSize:25}}>separate buttons</Text>
-      <Button title='on Press2' onPress={() =>name("hello saroj")} color={'black'} ></Button>
-      </View>
-  );
-  };
+const App = () => {
   
+
+  return (
+    <View style={{flex:1, flexDirection:"row", flexWrap:"wrap"}}>
+      
+      <First />
+      <Second />
+      <Third/>
+    </View>
+
+  );
+};
+
+const First = ()=>{
+  return(
+<View style={styles.color}>
+  <Text>Otp</Text>
+</View>
+  )
+
+}
+
+const Second = ()=>{
+  return(
+<View style={styles.color}>
+  <Text>Otp</Text>
+</View>
+  )
+
+}
+
+const Third = ()=>{
+  return(
+<View style={styles.color}>
+  <Text>Otp</Text>
+</View>
+  )
+
+}
+ 
+const styles= StyleSheet.create({
+ color:{
+  height:200,
+  width:400,
+  backgroundColor:"red",
+  margin:1,
+  marginBottom:1,
+ }
+
+})
+
+
+
+
 export default App;
